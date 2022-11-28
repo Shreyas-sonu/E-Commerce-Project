@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+:root {
+  --base-color: #6739b7;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #efefef;
+  font-family: "Lato", sans-serif;
+}
+
+.active {
+  background-color: #6739b7 !important;
+  color: #fff !important;
+  border: 1px solid #6739b7 !important;
+}
+
+#spinnerBlock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#spinnerBlock svg {
+  width: 100px;
+  overflow: visible;
+}
+#spinnerBlock svg circle {
+  stroke: var(--base-color);
+  transform-origin: 50px 50px;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
